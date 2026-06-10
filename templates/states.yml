@@ -1,0 +1,38 @@
+states:
+  - name: 发现机会
+    description: 刚看到机会，尚未评估
+  - name: 待评估
+    description: 已收集 JD，等待评估
+  - name: 已评估
+    description: 已生成岗位评估报告，等待决策
+  - name: 准备投递
+    description: 正在准备简历、话术或内推材料
+  - name: 已投递
+    description: 已正式提交申请或简历
+  - name: 内推中
+    description: 已进入内推链路
+  - name: 猎头沟通
+    description: 与猎头或 HR 初步沟通中
+  - name: 一面
+    description: 一轮面试阶段
+  - name: 二面
+    description: 二轮面试阶段
+  - name: 终面
+    description: 终面或高层面试阶段
+  - name: Offer
+    description: 已拿到 offer
+  - name: 谈薪
+    description: 正在谈薪或谈条件
+  - name: 背调
+    description: 背景调查阶段
+  - name: 接受
+    description: 已接受 offer
+  - name: 拒绝
+    description: 被公司拒绝
+  - name: 放弃
+    description: 用户主动放弃
+  - name: 冷却
+    description: 暂停推进，后续再看
+  - name: 不建议
+    description: 匹配度低，不建议投入
+

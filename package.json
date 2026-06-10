@@ -1,0 +1,40 @@
+{
+  "name": "career-ops-zh",
+  "version": "0.1.0",
+  "description": "面向中文求职市场的 AI 职业操作系统：岗位评估、中文简历定制、求职沟通、面试准备、管道追踪与职业策略。",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "doctor": "node scripts/doctor.mjs",
+    "verify": "node scripts/verify.mjs",
+    "init:user": "node scripts/init-user.mjs",
+    "sample": "node scripts/generate-sample.mjs",
+    "model:call": "node scripts/model-call.mjs",
+    "evaluate:provider": "node scripts/evaluate-with-provider.mjs",
+    "resume:html": "node scripts/generate-html-resume.mjs",
+    "resume:pdf": "node scripts/generate-pdf.mjs",
+    "growth:kit": "node scripts/generate-growth-kit.mjs",
+    "story-sync": "node scripts/story-sync.mjs",
+    "tracker:sync": "node scripts/tracker-sync.mjs",
+    "scan:domestic": "node scripts/scan-domestic-jobs.mjs",
+    "scan:match": "node scripts/scan-domestic-jobs.mjs --recommend",
+    "inbox-server": "node scripts/jd-inbox-server.mjs",
+    "build:bookmarklets": "node scripts/build-bookmarklets.mjs"
+  },
+  "keywords": [
+    "career",
+    "job-search",
+    "resume",
+    "ai",
+    "china",
+    "中文求职",
+    "职业发展"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}

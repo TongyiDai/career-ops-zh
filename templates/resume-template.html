@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{TITLE}}</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #667085;
+      --line: #e6e8ef;
+      --accent: #2454ff;
+      --accent-soft: #eef3ff;
+      --bg: #f6f7fb;
+      --paper: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.62;
+    }
+    .page {
+      width: 920px;
+      margin: 32px auto;
+      background: var(--paper);
+      padding: 54px 64px;
+      border-radius: 22px;
+      box-shadow: 0 20px 60px rgba(22, 34, 66, 0.10);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      margin: 34px 0 14px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 20px;
+      color: var(--accent);
+    }
+    h3 {
+      margin: 22px 0 8px;
+      font-size: 16px;
+    }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 12px; padding-left: 22px; }
+    li { margin: 5px 0; }
+    strong { font-weight: 700; }
+    code {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 1px 5px;
+      border-radius: 5px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+    .content > p:first-of-type {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: auto;
+        margin: 0;
+        padding: 24mm 20mm;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      h2 { break-after: avoid; }
+      h3 { break-after: avoid; }
+      li { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="content">
+{{CONTENT}}
+    </div>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+{
+  "default_backend": "local-markdown",
+  "backends": {
+    "local-markdown": {
+      "enabled": true,
+      "description": "默认后端：继续使用 data/*.md 作为求职管道事实源。"
+    },
+    "lark-base": {
+      "enabled": false,
+      "description": "可选后端：把求职管道同步到飞书多维表格。请复制为 config/tracker-backends.json 后填入真实 app_token/table_id。",
+      "app_token": "base_xxx",
+      "tables": {
+        "applications": {
+          "table_id": "tbl_xxx_applications",
+          "source": "data/applications.md",
+          "key_fields": ["公司", "岗位"],
+          "field_mapping": {
+            "#": "序号",
+            "日期": "日期",
+            "公司": "公司",
+            "岗位": "岗位",
+            "来源": "来源",
+            "评分": "评分",
+            "状态": "状态",
+            "报告": "报告",
+            "下一步": "下一步",
+            "备注": "备注"
+          }
+        },
+        "contacts": {
+          "table_id": "tbl_xxx_contacts",
+          "source": "data/contacts.md",
+          "key_fields": ["姓名", "公司", "角色"],
+          "field_mapping": {
+            "日期": "日期",
+            "姓名": "姓名",
+            "公司": "公司",
+            "角色": "角色",
+            "来源": "来源",
+            "联系方式": "联系方式",
+            "关系": "关系",
+            "下一步": "下一步",
+            "备注": "备注"
+          }
+        },
+        "followups": {
+          "table_id": "tbl_xxx_followups",
+          "source": "data/followups.md",
+          "key_fields": ["公司", "岗位", "对象", "日期"],
+          "field_mapping": {
+            "日期": "日期",
+            "公司": "公司",
+            "岗位": "岗位",
+            "对象": "对象",
+            "场景": "场景",
+            "上次动作": "上次动作",
+            "建议下次跟进": "建议下次跟进",
+            "状态": "状态",
+            "备注": "备注"
+          }
+        },
+        "interviews": {
+          "table_id": "tbl_xxx_interviews",
+          "source": "data/interviews.md",
+          "key_fields": ["公司", "岗位", "轮次", "日期"],
+          "field_mapping": {
+            "日期": "日期",
+            "公司": "公司",
+            "岗位": "岗位",
+            "轮次": "轮次",
+            "面试官": "面试官",
+            "重点问题": "重点问题",
+            "表现复盘": "表现复盘",
+            "下一步": "下一步",
+            "备注": "备注"
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,108 @@
+# AI 求职助手用户画像配置模板
+
+candidate:
+  full_name: "张三"
+  email: "zhangsan@example.com"
+  phone: "+86 138-0000-0000"
+  location: "北京"
+  timezone: "Asia/Shanghai"
+  linkedin: ""
+  maimai: ""
+  github: ""
+  portfolio_url: ""
+
+target_roles:
+  primary:
+    - "AI 产品经理"
+    - "Agent 产品负责人"
+  secondary:
+    - "解决方案顾问"
+    - "AI 转型顾问"
+  archetypes:
+    - name: "AI 产品/Agent 产品"
+      level: "高级/负责人"
+      fit: "primary"
+    - name: "解决方案/售前/Forward Deployed"
+      level: "高级/专家"
+      fit: "secondary"
+    - name: "组织效率/数字化转型"
+      level: "负责人/顾问"
+      fit: "adjacent"
+
+narrative:
+  headline: "懂业务、懂产品、懂 AI 落地的复合型候选人"
+  career_story: "请在这里写清楚你的职业主线：从哪里来、解决过什么问题、下一步想去哪里。"
+  superpowers:
+    - "复杂业务问题结构化"
+    - "跨团队推动落地"
+    - "AI/数字化场景设计"
+  proof_points:
+    - name: "代表项目 A"
+      metric: "例如：覆盖 1000+ 用户，提升效率 30%"
+      url: ""
+
+preferences:
+  target_cities:
+    - "北京"
+    - "上海"
+    - "深圳"
+    - "杭州"
+  remote_preference: "可接受混合办公，优先一线/新一线城市"
+  company_types:
+    preferred:
+      - "AI 原生公司"
+      - "企业服务/SaaS"
+      - "大厂 AI/平台/效率团队"
+    avoid:
+      - "纯外包驻场"
+      - "职责极不清晰的救火岗位"
+      - "长期强加班但成长不明确"
+  deal_breakers:
+    - "薪资明显低于市场"
+    - "要求伪造经历或不合规操作"
+  red_flag_keywords:
+    - "外包"
+    - "驻场"
+    - "派遣"
+    - "OD"
+    - "代招"
+    - "大小周"
+    - "单休"
+    - "抗压能力强"
+  outsourcing_vendor_keywords:
+    - "人瑞"
+    - "中智"
+    - "FESCO"
+    - "外企德科"
+    - "万宝盛华"
+    - "科锐国际"
+    - "外包/派遣/OD 岗位未明确转正路径"
+    - "长期大小周或默认 996 且无明确补偿"
+  red_flag_keywords:
+    outsourcing_vendors:
+      - "人瑞"
+      - "中智"
+      - "FESCO"
+      - "外企德科"
+      - "万宝盛华"
+      - "科锐国际"
+    role_risks:
+      - "驻场"
+      - "外包"
+      - "派遣"
+      - "OD"
+      - "大小周"
+
+compensation:
+  currency: "CNY"
+  target_range: "请填写目标总包，例如 80-120 万/年"
+  minimum: "请填写底线"
+  notes: "可填写期权、奖金、base 地、社保个税等偏好"
+
+language:
+  output: "zh-CN"
+  tone: "专业、真诚、克制、有判断"
+
+models:
+  preferred_provider: "current-agent"
+  fallback_provider: "openai-compatible"

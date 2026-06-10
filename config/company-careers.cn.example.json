@@ -1,0 +1,1344 @@
+{
+  "comment": "中国热门行业明星公司官网招聘页目录。默认全部 disabled，作为候选源目录；启用前建议先人工打开 careers_url 校验。扫描只使用公开网页/公开API，不绕过登录、验证码、反爬或平台风控。",
+  "default_provider": "static-html",
+  "default_enabled": false,
+  "default_link_include": [
+    "job",
+    "jobs",
+    "career",
+    "careers",
+    "position",
+    "positions",
+    "join",
+    "talent",
+    "hire",
+    "recruit",
+    "zhaopin",
+    "campus",
+    "social",
+    "招聘",
+    "职位",
+    "岗位",
+    "加入",
+    "人才",
+    "社会招聘",
+    "校园招聘"
+  ],
+  "default_link_exclude": [
+    "privacy",
+    "login",
+    "signin",
+    "help",
+    "about",
+    "news",
+    "investor",
+    "terms",
+    "隐私",
+    "登录",
+    "帮助",
+    "关于我们",
+    "新闻",
+    "投资者"
+  ],
+  "title_filter": {
+    "positive": [
+      "AI",
+      "AIGC",
+      "大模型",
+      "智能体",
+      "Agent",
+      "数据",
+      "产品经理",
+      "产品专家",
+      "产品运营",
+      "解决方案",
+      "解决方案架构师",
+      "售前",
+      "商业技术",
+      "BTE",
+      "客户成功",
+      "价值顾问",
+      "KA",
+      "大客户",
+      "HRTech",
+      "People",
+      "人力资源数字化",
+      "数字化转型",
+      "算法",
+      "机器学习",
+      "研发",
+      "工程师",
+      "平台",
+      "云",
+      "组织效率",
+      "咨询",
+      "交付",
+      "运营"
+    ],
+    "negative": [
+      "实习",
+      "校招",
+      "外包",
+      "驻场",
+      "电话销售",
+      "纯销售",
+      "客服",
+      "客户端开发",
+      "后端开发",
+      "Java开发"
+    ]
+  },
+  "location_filter": {
+    "allow": [
+      "北京",
+      "上海",
+      "深圳",
+      "杭州",
+      "广州",
+      "成都",
+      "南京",
+      "苏州",
+      "武汉",
+      "西安",
+      "远程"
+    ],
+    "block": []
+  },
+  "industries": [
+    {
+      "id": "ai-foundation-models",
+      "name": "AI 大模型 / AI 原生",
+      "companies": [
+        {
+          "name": "DeepSeek",
+          "careers_url": "https://www.deepseek.com/",
+          "notes": "官网候选入口，建议校验是否有招聘/加入我们链接"
+        },
+        {
+          "name": "月之暗面 Moonshot AI",
+          "careers_url": "https://www.moonshot.cn/",
+          "notes": "官网候选入口"
+        },
+        {
+          "name": "智谱 AI",
+          "careers_url": "https://www.zhipuai.cn/",
+          "notes": "官网候选入口"
+        },
+        {
+          "name": "MiniMax",
+          "careers_url": "https://www.minimax.io/",
+          "notes": "官网候选入口"
+        },
+        {
+          "name": "百川智能",
+          "careers_url": "https://www.baichuan-ai.com/",
+          "notes": "官网候选入口"
+        },
+        {
+          "name": "零一万物 01.AI",
+          "careers_url": "https://www.01.ai/",
+          "notes": "官网候选入口"
+        },
+        {
+          "name": "阶跃星辰 StepFun",
+          "careers_url": "https://www.stepfun.com/",
+          "notes": "官网候选入口"
+        },
+        {
+          "name": "面壁智能 ModelBest",
+          "careers_url": "https://www.modelbest.cn/",
+          "notes": "官网候选入口"
+        },
+        {
+          "name": "硅基流动 SiliconFlow",
+          "careers_url": "https://www.siliconflow.cn/",
+          "notes": "官网候选入口"
+        },
+        {
+          "name": "商汤科技 SenseTime",
+          "careers_url": "https://www.sensetime.com/cn/careers",
+          "notes": "官网招聘页"
+        },
+        {
+          "name": "第四范式 4Paradigm",
+          "careers_url": "https://www.4paradigm.com/careers",
+          "notes": "官网招聘页候选"
+        }
+      ]
+    },
+    {
+      "id": "internet-platforms",
+      "name": "互联网平台 / 综合科技",
+      "companies": [
+        {
+          "name": "字节跳动",
+          "careers_url": "https://jobs.bytedance.com/experienced/position?keywords=AI",
+          "provider": "python-browser",
+          "keyword": "AI",
+          "page_size": 50,
+          "timeout_ms": 25000,
+          "python_browser": {
+            "wait_ms": 6000,
+            "selector": "body"
+          },
+          "notes": "jobs.bytedance.com 社招 SPA 通过 Playwright 渲染并读取页面公开 search/job/posts 响应，已接入 python-browser provider；不绕过登录/验证码/风控"
+        },
+        {
+          "name": "腾讯",
+          "careers_url": "https://careers.tencent.com/",
+          "provider": "tencent-careers",
+          "page_size": 50,
+          "notes": "腾讯 careers 公开查询 API，已接入 tencent-careers provider"
+        },
+        {
+          "name": "阿里巴巴",
+          "careers_url": "https://talent.alibaba.com/",
+          "provider": "python-browser",
+          "keyword": "AI",
+          "page_size": 50,
+          "timeout_ms": 25000,
+          "python_browser": {
+            "wait_ms": 7000,
+            "selector": "body"
+          },
+          "notes": "talent.alibaba.com 先渲染公开页面取得页面发放的 CSRF，再调用公开 position/search；已接入 python-browser provider；不绕过登录/验证码/风控"
+        },
+        {
+          "name": "百度",
+          "careers_url": "https://talent.baidu.com/",
+          "provider": "baidu-careers",
+          "page_size": 50,
+          "notes": "百度招聘社招页 SSR 数据，已接入 baidu-careers provider"
+        },
+        {
+          "name": "京东",
+          "careers_url": "https://zhaopin.jd.com/",
+          "provider": "jd-careers",
+          "page_size": 50,
+          "notes": "京东招聘 web/job/job_list 公开岗位接口，已接入 jd-careers provider；部分新版接口仍会返回 NotLogin"
+        },
+        {
+          "name": "美团",
+          "careers_url": "https://zhaopin.meituan.com/",
+          "provider": "meituan-careers",
+          "page_size": 50,
+          "scan_status": "api-session-limited",
+          "notes": "已识别 getVolunteerJobList 接口并接入 meituan-careers provider；当前匿名请求可能返回空列表，需继续确认公开参数或用户会话导出方案"
+        },
+        {
+          "name": "快手",
+          "careers_url": "https://zhaopin.kuaishou.cn/"
+        },
+        {
+          "name": "小米",
+          "careers_url": "https://hr.xiaomi.com/job/list",
+          "provider": "xiaomi-careers",
+          "page_size": 50,
+          "notes": "小米招聘岗位列表页可匿名抽取 job/view 岗位链接，已接入 xiaomi-careers provider"
+        },
+        {
+          "name": "网易",
+          "careers_url": "https://hr.163.com/",
+          "provider": "netease-careers",
+          "keyword": "AI",
+          "page_size": 50,
+          "notes": "网易招聘 queryPage 公开接口，已接入 netease-careers provider"
+        },
+        {
+          "name": "360",
+          "careers_url": "https://hr.360.cn/"
+        }
+      ]
+    },
+    {
+      "id": "ecommerce-local-life",
+      "name": "电商 / 本地生活 / 交易平台",
+      "companies": [
+        {
+          "name": "拼多多",
+          "careers_url": "https://careers.pinduoduo.com/"
+        },
+        {
+          "name": "淘宝天猫",
+          "careers_url": "https://talent.alibaba.com/",
+          "scan_status": "api-protected",
+          "notes": "talent.alibaba.com 接口存在风控/CSRF，待做合规 API 适配；当前不默认抓取"
+        },
+        {
+          "name": "京东零售",
+          "careers_url": "https://zhaopin.jd.com/",
+          "provider": "jd-careers",
+          "page_size": 50,
+          "notes": "京东招聘 web/job/job_list 公开岗位接口，已接入 jd-careers provider；部分新版接口仍会返回 NotLogin"
+        },
+        {
+          "name": "美团",
+          "careers_url": "https://zhaopin.meituan.com/",
+          "scan_status": "api-needs-params",
+          "notes": "zhaopin.meituan.com 需要进一步确认公开接口参数"
+        },
+        {
+          "name": "饿了么",
+          "careers_url": "https://talent.alibaba.com/",
+          "scan_status": "api-protected",
+          "notes": "talent.alibaba.com 接口存在风控/CSRF，待做合规 API 适配；当前不默认抓取"
+        },
+        {
+          "name": "得物",
+          "careers_url": "https://hr.dewu.com/"
+        },
+        {
+          "name": "小红书电商",
+          "careers_url": "https://job.xiaohongshu.com/"
+        },
+        {
+          "name": "唯品会",
+          "careers_url": "https://campus.vip.com/"
+        },
+        {
+          "name": "携程",
+          "careers_url": "https://careers.ctrip.com/",
+          "provider": "ctrip-careers",
+          "page_size": 50,
+          "notes": "携程招聘 getJobAd 公开接口，已接入 ctrip-careers provider"
+        },
+        {
+          "name": "同程旅行",
+          "careers_url": "https://job.ly.com/"
+        }
+      ]
+    },
+    {
+      "id": "enterprise-saas",
+      "name": "企业服务 / SaaS / 协同办公",
+      "companies": [
+        {
+          "name": "飞书",
+          "careers_url": "https://jobs.bytedance.com/",
+          "scan_status": "spa-needs-api",
+          "notes": "招聘站为 SPA/动态数据，待适配公开 API；当前建议 bookmarklet 或 agent-handoff"
+        },
+        {
+          "name": "钉钉",
+          "careers_url": "https://talent.alibaba.com/",
+          "scan_status": "api-protected",
+          "notes": "talent.alibaba.com 接口存在风控/CSRF，待做合规 API 适配；当前不默认抓取"
+        },
+        {
+          "name": "企业微信",
+          "careers_url": "https://careers.tencent.com/",
+          "provider": "tencent-careers",
+          "page_size": 50,
+          "notes": "腾讯 careers 公开查询 API，已接入 tencent-careers provider"
+        },
+        {
+          "name": "金山办公 WPS",
+          "careers_url": "https://campus.wps.cn/"
+        },
+        {
+          "name": "用友",
+          "careers_url": "https://www.yonyou.com/join/"
+        },
+        {
+          "name": "金蝶",
+          "careers_url": "https://www.kingdee.com/join/"
+        },
+        {
+          "name": "北森",
+          "careers_url": "https://www.beisen.com/careers"
+        },
+        {
+          "name": "纷享销客",
+          "careers_url": "https://www.fxiaoke.com/joinus/"
+        },
+        {
+          "name": "销售易",
+          "careers_url": "https://www.xiaoshouyi.com/about/join"
+        },
+        {
+          "name": "明道云",
+          "careers_url": "https://www.mingdao.com/joinus"
+        }
+      ]
+    },
+    {
+      "id": "cloud-infra-devtools",
+      "name": "云计算 / 基础设施 / 开发者工具",
+      "companies": [
+        {
+          "name": "阿里云",
+          "careers_url": "https://talent.alibaba.com/",
+          "provider": "python-browser",
+          "keyword": "阿里云",
+          "page_size": 50,
+          "timeout_ms": 25000,
+          "python_browser": {
+            "wait_ms": 7000,
+            "selector": "body"
+          },
+          "notes": "复用 talent.alibaba.com 公开 position/search，关键词限定阿里云；已接入 python-browser provider"
+        },
+        {
+          "name": "腾讯云",
+          "careers_url": "https://careers.tencent.com/",
+          "provider": "tencent-careers",
+          "page_size": 50,
+          "notes": "腾讯 careers 公开查询 API，已接入 tencent-careers provider"
+        },
+        {
+          "name": "华为云",
+          "careers_url": "https://career.huawei.com/"
+        },
+        {
+          "name": "火山引擎",
+          "careers_url": "https://jobs.bytedance.com/",
+          "scan_status": "spa-needs-api",
+          "notes": "招聘站为 SPA/动态数据，待适配公开 API；当前建议 bookmarklet 或 agent-handoff"
+        },
+        {
+          "name": "百度智能云",
+          "careers_url": "https://talent.baidu.com/",
+          "provider": "baidu-careers",
+          "page_size": 50,
+          "notes": "百度招聘社招页 SSR 数据，已接入 baidu-careers provider"
+        },
+        {
+          "name": "京东云",
+          "careers_url": "https://zhaopin.jd.com/",
+          "provider": "jd-careers",
+          "page_size": 50,
+          "notes": "京东招聘 web/job/job_list 公开岗位接口，已接入 jd-careers provider；部分新版接口仍会返回 NotLogin"
+        },
+        {
+          "name": "金山云",
+          "careers_url": "https://www.ksyun.com/career"
+        },
+        {
+          "name": "UCloud",
+          "careers_url": "https://www.ucloud.cn/site/about/join"
+        },
+        {
+          "name": "青云 QingCloud",
+          "careers_url": "https://www.qingcloud.com/careers"
+        },
+        {
+          "name": "七牛云",
+          "careers_url": "https://www.qiniu.com/about/jobs"
+        }
+      ]
+    },
+    {
+      "id": "semiconductor-chips",
+      "name": "半导体 / 芯片 / 算力",
+      "companies": [
+        {
+          "name": "华为海思",
+          "careers_url": "https://career.huawei.com/"
+        },
+        {
+          "name": "中芯国际 SMIC",
+          "careers_url": "https://www.smics.com/cn/site/careers"
+        },
+        {
+          "name": "长江存储 YMTC",
+          "careers_url": "https://www.ymtc.com/cn/join-us"
+        },
+        {
+          "name": "长鑫存储 CXMT",
+          "careers_url": "https://www.cxmt.com/careers"
+        },
+        {
+          "name": "寒武纪",
+          "careers_url": "https://www.cambricon.com/index.php?m=content&c=index&a=lists&catid=43"
+        },
+        {
+          "name": "地平线 Horizon Robotics",
+          "careers_url": "https://www.horizon.cc/joinus"
+        },
+        {
+          "name": "黑芝麻智能",
+          "careers_url": "https://www.blacksesame.com.cn/cn/joinus.html"
+        },
+        {
+          "name": "燧原科技",
+          "careers_url": "https://www.enflame-tech.com/join"
+        },
+        {
+          "name": "壁仞科技",
+          "careers_url": "https://www.birentech.com/join"
+        },
+        {
+          "name": "沐曦集成电路",
+          "careers_url": "https://www.metax-tech.com/career"
+        }
+      ]
+    },
+    {
+      "id": "ev-smart-mobility",
+      "name": "新能源汽车 / 智能出行",
+      "companies": [
+        {
+          "name": "比亚迪",
+          "careers_url": "https://job.byd.com/"
+        },
+        {
+          "name": "蔚来 NIO",
+          "careers_url": "https://www.nio.cn/careers"
+        },
+        {
+          "name": "理想汽车",
+          "careers_url": "https://www.lixiang.com/careers"
+        },
+        {
+          "name": "小鹏汽车",
+          "careers_url": "https://www.xiaopeng.com/careers.html"
+        },
+        {
+          "name": "零跑汽车",
+          "careers_url": "https://www.leapmotor.com/career"
+        },
+        {
+          "name": "极氪 ZEEKR",
+          "careers_url": "https://hr.geely.com/"
+        },
+        {
+          "name": "小米汽车",
+          "careers_url": "https://hr.xiaomi.com/job/list",
+          "provider": "xiaomi-careers",
+          "page_size": 50,
+          "notes": "小米招聘岗位列表页可匿名抽取 job/view 岗位链接，已接入 xiaomi-careers provider"
+        },
+        {
+          "name": "华为智能汽车解决方案",
+          "careers_url": "https://career.huawei.com/"
+        },
+        {
+          "name": "广汽埃安",
+          "careers_url": "https://www.aion.com.cn/career"
+        },
+        {
+          "name": "宁德时代 CATL",
+          "careers_url": "https://www.catl.com/careers/"
+        }
+      ]
+    },
+    {
+      "id": "autonomous-driving",
+      "name": "自动驾驶 / 车联网 / 智驾",
+      "companies": [
+        {
+          "name": "Momenta",
+          "careers_url": "https://www.momenta.cn/join"
+        },
+        {
+          "name": "小马智行 Pony.ai",
+          "careers_url": "https://www.pony.ai/careers"
+        },
+        {
+          "name": "文远知行 WeRide",
+          "careers_url": "https://www.weride.ai/careers"
+        },
+        {
+          "name": "元戎启行 DeepRoute.ai",
+          "careers_url": "https://www.deeproute.ai/careers"
+        },
+        {
+          "name": "轻舟智航 QCraft",
+          "careers_url": "https://www.qcraft.ai/careers"
+        },
+        {
+          "name": "AutoX",
+          "careers_url": "https://www.autox.ai/careers"
+        },
+        {
+          "name": "毫末智行",
+          "careers_url": "https://www.haomo.ai/join"
+        },
+        {
+          "name": "纵目科技",
+          "careers_url": "https://www.zongmutech.com/careers"
+        },
+        {
+          "name": "禾多科技",
+          "careers_url": "https://www.holomatic.com/join"
+        },
+        {
+          "name": "驭势科技 UISEE",
+          "careers_url": "https://www.uisee.com/join"
+        }
+      ]
+    },
+    {
+      "id": "robotics-hardware",
+      "name": "机器人 / 智能硬件 / 无人设备",
+      "companies": [
+        {
+          "name": "大疆 DJI",
+          "careers_url": "https://we.dji.com/zh-CN/jobs"
+        },
+        {
+          "name": "宇树科技 Unitree",
+          "careers_url": "https://www.unitree.com/cn/career/"
+        },
+        {
+          "name": "优必选 UBTECH",
+          "careers_url": "https://www.ubtrobot.com/cn/joinus"
+        },
+        {
+          "name": "傅利叶智能 Fourier",
+          "careers_url": "https://www.fftai.com/cn/join-us"
+        },
+        {
+          "name": "云鲸智能",
+          "careers_url": "https://www.narwal.com/cn/careers"
+        },
+        {
+          "name": "石头科技",
+          "careers_url": "https://www.roborock.com/pages/careers"
+        },
+        {
+          "name": "科沃斯",
+          "careers_url": "https://www.ecovacs.cn/careers"
+        },
+        {
+          "name": "极飞科技 XAG",
+          "careers_url": "https://www.xa.com/cn/careers"
+        },
+        {
+          "name": "追觅科技",
+          "careers_url": "https://www.dreame.tech/cn/careers"
+        },
+        {
+          "name": "海康机器人",
+          "careers_url": "https://www.hikrobotics.com/cn/career"
+        }
+      ]
+    },
+    {
+      "id": "fintech-digital-finance",
+      "name": "金融科技 / 数字金融",
+      "companies": [
+        {
+          "name": "蚂蚁集团",
+          "careers_url": "https://talent.antgroup.com/"
+        },
+        {
+          "name": "京东科技",
+          "careers_url": "https://zhaopin.jd.com/",
+          "provider": "jd-careers",
+          "page_size": 50,
+          "notes": "京东招聘 web/job/job_list 公开岗位接口，已接入 jd-careers provider；部分新版接口仍会返回 NotLogin"
+        },
+        {
+          "name": "度小满",
+          "careers_url": "https://www.duxiaoman.com/join"
+        },
+        {
+          "name": "平安科技",
+          "careers_url": "https://talent.pingan.com/"
+        },
+        {
+          "name": "微众银行",
+          "careers_url": "https://www.webank.com/careers"
+        },
+        {
+          "name": "众安保险",
+          "careers_url": "https://www.zhongan.com/careers"
+        },
+        {
+          "name": "富途",
+          "careers_url": "https://www.futunn.com/about/careers"
+        },
+        {
+          "name": "老虎证券",
+          "careers_url": "https://www.itiger.com/about/careers"
+        },
+        {
+          "name": "陆金所控股",
+          "careers_url": "https://www.lufaxholding.com/careers"
+        },
+        {
+          "name": "招银网络科技",
+          "careers_url": "https://cmbnt.cmbchina.com/"
+        }
+      ]
+    },
+    {
+      "id": "banking-brokerage-insurance",
+      "name": "银行 / 券商 / 保险数字化",
+      "companies": [
+        {
+          "name": "招商银行",
+          "careers_url": "https://career.cmbchina.com/"
+        },
+        {
+          "name": "中国平安",
+          "careers_url": "https://talent.pingan.com/"
+        },
+        {
+          "name": "中国人寿",
+          "careers_url": "https://www.chinalife.com.cn/chinalife/zhaopin/"
+        },
+        {
+          "name": "中信证券",
+          "careers_url": "https://www.citics.com/newsite/careers/"
+        },
+        {
+          "name": "华泰证券",
+          "careers_url": "https://job.htsc.com.cn/"
+        },
+        {
+          "name": "东方财富",
+          "careers_url": "https://www.eastmoney.com/career/"
+        },
+        {
+          "name": "同花顺",
+          "careers_url": "https://www.10jqka.com.cn/career/"
+        },
+        {
+          "name": "广发证券",
+          "careers_url": "https://www.gf.com.cn/about/career"
+        },
+        {
+          "name": "国泰君安",
+          "careers_url": "https://www.gtja.com/content/default/careers.html"
+        },
+        {
+          "name": "兴业银行",
+          "careers_url": "https://job.cib.com.cn/"
+        }
+      ]
+    },
+    {
+      "id": "digital-healthcare",
+      "name": "医疗健康 / 互联网医疗",
+      "companies": [
+        {
+          "name": "京东健康",
+          "careers_url": "https://zhaopin.jd.com/",
+          "provider": "jd-careers",
+          "page_size": 50,
+          "notes": "京东招聘 web/job/job_list 公开岗位接口，已接入 jd-careers provider；部分新版接口仍会返回 NotLogin"
+        },
+        {
+          "name": "阿里健康",
+          "careers_url": "https://talent.alibaba.com/",
+          "provider": "python-browser",
+          "keyword": "阿里健康",
+          "page_size": 50,
+          "timeout_ms": 25000,
+          "python_browser": {
+            "wait_ms": 7000,
+            "selector": "body"
+          },
+          "notes": "复用 talent.alibaba.com 公开 position/search，关键词限定阿里健康；已接入 python-browser provider"
+        },
+        {
+          "name": "微医",
+          "careers_url": "https://www.guahao.com/about/join"
+        },
+        {
+          "name": "平安健康",
+          "careers_url": "https://talent.pingan.com/"
+        },
+        {
+          "name": "丁香园",
+          "careers_url": "https://www.dxy.cn/pages/jobs"
+        },
+        {
+          "name": "好大夫在线",
+          "careers_url": "https://www.haodf.com/info/aboutus.php"
+        },
+        {
+          "name": "医联",
+          "careers_url": "https://www.medlinker.com/join"
+        },
+        {
+          "name": "春雨医生",
+          "careers_url": "https://www.chunyuyisheng.com/about/jobs"
+        },
+        {
+          "name": "妙手医生",
+          "careers_url": "https://www.miaoshou.com/about/join"
+        },
+        {
+          "name": "圆心科技",
+          "careers_url": "https://www.yuanxin-inc.com/join"
+        }
+      ]
+    },
+    {
+      "id": "biopharma-cro",
+      "name": "生物医药 / CRO / 创新药",
+      "companies": [
+        {
+          "name": "药明康德",
+          "careers_url": "https://careers.wuxiapptec.com/"
+        },
+        {
+          "name": "药明生物",
+          "careers_url": "https://www.wuxibiologics.com/careers/"
+        },
+        {
+          "name": "百济神州",
+          "careers_url": "https://www.beigene.com/careers/"
+        },
+        {
+          "name": "恒瑞医药",
+          "careers_url": "https://www.hengrui.com/join"
+        },
+        {
+          "name": "信达生物",
+          "careers_url": "https://www.innoventbio.com/careers"
+        },
+        {
+          "name": "君实生物",
+          "careers_url": "https://www.junshipharma.com/careers"
+        },
+        {
+          "name": "复星医药",
+          "careers_url": "https://www.fosunpharma.com/careers"
+        },
+        {
+          "name": "康龙化成",
+          "careers_url": "https://www.pharmaron.com/careers"
+        },
+        {
+          "name": "泰格医药",
+          "careers_url": "https://www.tigermedgrp.com/careers"
+        },
+        {
+          "name": "贝达药业",
+          "careers_url": "https://www.bettapharma.com/careers"
+        }
+      ]
+    },
+    {
+      "id": "industrial-internet",
+      "name": "工业互联网 / 智能制造",
+      "companies": [
+        {
+          "name": "树根互联",
+          "careers_url": "https://www.rootcloud.com/careers"
+        },
+        {
+          "name": "卡奥斯 COSMOPlat",
+          "careers_url": "https://www.cosmoplat.com/join"
+        },
+        {
+          "name": "徐工汉云",
+          "careers_url": "https://www.xcmg-cloud.com/join"
+        },
+        {
+          "name": "航天云网",
+          "careers_url": "https://www.casicloud.com/recruit"
+        },
+        {
+          "name": "格创东智",
+          "careers_url": "https://www.getech.cn/join"
+        },
+        {
+          "name": "美云智数",
+          "careers_url": "https://www.midea.com/cn/about_midea/join_us"
+        },
+        {
+          "name": "寄云科技",
+          "careers_url": "https://www.neucloud.cn/join"
+        },
+        {
+          "name": "蘑菇物联",
+          "careers_url": "https://www.mogulinker.com/join"
+        },
+        {
+          "name": "黑湖科技",
+          "careers_url": "https://www.blacklake.cn/join"
+        },
+        {
+          "name": "震坤行",
+          "careers_url": "https://www.zkh.com/careers"
+        }
+      ]
+    },
+    {
+      "id": "real-estate-home",
+      "name": "房产 / 家居 / 空间服务",
+      "companies": [
+        {
+          "name": "贝壳找房",
+          "careers_url": "https://join.ke.com/"
+        },
+        {
+          "name": "链家",
+          "careers_url": "https://join.lianjia.com/"
+        },
+        {
+          "name": "自如",
+          "careers_url": "https://www.ziroom.com/zhaopin/"
+        },
+        {
+          "name": "万科",
+          "careers_url": "https://www.vanke.com/join"
+        },
+        {
+          "name": "龙湖集团",
+          "careers_url": "https://www.longfor.com/career"
+        },
+        {
+          "name": "绿城中国",
+          "careers_url": "https://www.chinagreentown.com/careers"
+        },
+        {
+          "name": "碧桂园服务",
+          "careers_url": "https://www.bgyfw.com/join"
+        },
+        {
+          "name": "居然之家",
+          "careers_url": "https://www.juran.com.cn/join"
+        },
+        {
+          "name": "红星美凯龙",
+          "careers_url": "https://www.chinaredstar.com/join"
+        },
+        {
+          "name": "土巴兔",
+          "careers_url": "https://www.to8to.com/about/jobs.php"
+        }
+      ]
+    },
+    {
+      "id": "education-tech",
+      "name": "教育科技 / 职业教育",
+      "companies": [
+        {
+          "name": "学而思",
+          "careers_url": "https://job.100tal.com/"
+        },
+        {
+          "name": "新东方",
+          "careers_url": "https://zhaopin.xdf.cn/"
+        },
+        {
+          "name": "猿辅导",
+          "careers_url": "https://hr.yuanfudao.com/"
+        },
+        {
+          "name": "作业帮",
+          "careers_url": "https://hr.zybang.com/"
+        },
+        {
+          "name": "高途",
+          "careers_url": "https://www.gaotu.cn/join"
+        },
+        {
+          "name": "网易有道",
+          "careers_url": "https://hr.163.com/",
+          "provider": "netease-careers",
+          "keyword": "AI",
+          "page_size": 50,
+          "notes": "网易招聘 queryPage 公开接口，已接入 netease-careers provider"
+        },
+        {
+          "name": "火花思维",
+          "careers_url": "https://www.huohua.cn/join"
+        },
+        {
+          "name": "编程猫",
+          "careers_url": "https://www.codemao.cn/about/join"
+        },
+        {
+          "name": "核桃编程",
+          "careers_url": "https://www.hetao101.com/join"
+        },
+        {
+          "name": "粉笔",
+          "careers_url": "https://www.fenbi.com/page/zhaopin"
+        }
+      ]
+    },
+    {
+      "id": "games-entertainment",
+      "name": "游戏 / 互动娱乐",
+      "companies": [
+        {
+          "name": "腾讯游戏",
+          "careers_url": "https://careers.tencent.com/",
+          "provider": "tencent-careers",
+          "page_size": 50,
+          "notes": "腾讯 careers 公开查询 API，已接入 tencent-careers provider"
+        },
+        {
+          "name": "网易游戏",
+          "careers_url": "https://game.campus.163.com/"
+        },
+        {
+          "name": "米哈游",
+          "careers_url": "https://jobs.mihoyo.com/"
+        },
+        {
+          "name": "莉莉丝游戏",
+          "careers_url": "https://www.lilith.com/cn/careers"
+        },
+        {
+          "name": "叠纸游戏",
+          "careers_url": "https://www.papegames.cn/careers"
+        },
+        {
+          "name": "完美世界",
+          "careers_url": "https://www.wanmei.com/jobs/"
+        },
+        {
+          "name": "巨人网络",
+          "careers_url": "https://www.ga-me.com/careers"
+        },
+        {
+          "name": "三七互娱",
+          "careers_url": "https://www.37wan.net/join"
+        },
+        {
+          "name": "心动网络",
+          "careers_url": "https://www.xd.com/careers"
+        },
+        {
+          "name": "鹰角网络",
+          "careers_url": "https://www.hypergryph.com/join"
+        }
+      ]
+    },
+    {
+      "id": "content-social-community",
+      "name": "内容社区 / 社交 / 媒体",
+      "companies": [
+        {
+          "name": "小红书",
+          "careers_url": "https://job.xiaohongshu.com/"
+        },
+        {
+          "name": "哔哩哔哩 Bilibili",
+          "careers_url": "https://jobs.bilibili.com/"
+        },
+        {
+          "name": "知乎",
+          "careers_url": "https://www.zhihu.com/careers"
+        },
+        {
+          "name": "豆瓣",
+          "careers_url": "https://www.douban.com/about/jobs"
+        },
+        {
+          "name": "微博",
+          "careers_url": "https://career.sina.com.cn/"
+        },
+        {
+          "name": "快手",
+          "careers_url": "https://zhaopin.kuaishou.cn/"
+        },
+        {
+          "name": "抖音",
+          "careers_url": "https://jobs.bytedance.com/",
+          "scan_status": "spa-needs-api",
+          "notes": "招聘站为 SPA/动态数据，待适配公开 API；当前建议 bookmarklet 或 agent-handoff"
+        },
+        {
+          "name": "即刻",
+          "careers_url": "https://web.okjike.com/careers"
+        },
+        {
+          "name": "Soul",
+          "careers_url": "https://www.soulapp.cn/careers"
+        },
+        {
+          "name": "陌陌 / Hello Group",
+          "careers_url": "https://www.hellogroup.com/careers"
+        }
+      ]
+    },
+    {
+      "id": "logistics-supply-chain",
+      "name": "物流 / 供应链 / 即时配送",
+      "companies": [
+        {
+          "name": "顺丰",
+          "careers_url": "https://hr.sf-express.com/"
+        },
+        {
+          "name": "京东物流",
+          "careers_url": "https://zhaopin.jd.com/",
+          "provider": "jd-careers",
+          "page_size": 50,
+          "notes": "京东招聘 web/job/job_list 公开岗位接口，已接入 jd-careers provider；部分新版接口仍会返回 NotLogin"
+        },
+        {
+          "name": "菜鸟",
+          "careers_url": "https://talent.alibaba.com/",
+          "provider": "python-browser",
+          "keyword": "菜鸟",
+          "page_size": 50,
+          "timeout_ms": 25000,
+          "python_browser": {
+            "wait_ms": 7000,
+            "selector": "body"
+          },
+          "notes": "复用 talent.alibaba.com 公开 position/search，关键词限定菜鸟；已接入 python-browser provider"
+        },
+        {
+          "name": "满帮",
+          "careers_url": "https://www.fulltruckalliance.com/careers"
+        },
+        {
+          "name": "货拉拉",
+          "careers_url": "https://www.huolala.cn/join"
+        },
+        {
+          "name": "中通快递",
+          "careers_url": "https://www.zto.com/about/join"
+        },
+        {
+          "name": "圆通速递",
+          "careers_url": "https://www.yto.net.cn/join"
+        },
+        {
+          "name": "韵达",
+          "careers_url": "https://www.yundaex.com/join"
+        },
+        {
+          "name": "申通快递",
+          "careers_url": "https://www.sto.cn/join"
+        },
+        {
+          "name": "极兔速递",
+          "careers_url": "https://www.jtexpress.cn/careers"
+        }
+      ]
+    },
+    {
+      "id": "cross-border-global",
+      "name": "跨境出海 / 全球化 / 消费品牌",
+      "companies": [
+        {
+          "name": "SHEIN",
+          "careers_url": "https://careers.shein.com/"
+        },
+        {
+          "name": "Temu",
+          "careers_url": "https://careers.pinduoduo.com/"
+        },
+        {
+          "name": "TikTok",
+          "careers_url": "https://careers.tiktok.com/"
+        },
+        {
+          "name": "安克创新 Anker",
+          "careers_url": "https://www.anker-in.com/cn/careers"
+        },
+        {
+          "name": "大疆 DJI",
+          "careers_url": "https://we.dji.com/zh-CN/jobs"
+        },
+        {
+          "name": "影石 Insta360",
+          "careers_url": "https://www.insta360.com/careers"
+        },
+        {
+          "name": "泡泡玛特",
+          "careers_url": "https://www.popmart.com/cn/careers"
+        },
+        {
+          "name": "名创优品",
+          "careers_url": "https://www.miniso.com/careers"
+        },
+        {
+          "name": "传音控股",
+          "careers_url": "https://www.transsion.com/careers"
+        },
+        {
+          "name": "致欧科技",
+          "careers_url": "https://www.songmics.com/careers"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity-data-security",
+      "name": "网络安全 / 数据安全 / 信创",
+      "companies": [
+        {
+          "name": "奇安信",
+          "careers_url": "https://www.qianxin.com/join"
+        },
+        {
+          "name": "深信服",
+          "careers_url": "https://hr.sangfor.com/"
+        },
+        {
+          "name": "启明星辰",
+          "careers_url": "https://www.venustech.com.cn/join"
+        },
+        {
+          "name": "绿盟科技",
+          "careers_url": "https://www.nsfocus.com.cn/join"
+        },
+        {
+          "name": "安恒信息",
+          "careers_url": "https://www.dbappsecurity.com.cn/join"
+        },
+        {
+          "name": "天融信",
+          "careers_url": "https://www.topsec.com.cn/join"
+        },
+        {
+          "name": "亚信安全",
+          "careers_url": "https://www.asiainfo-sec.com/careers"
+        },
+        {
+          "name": "知道创宇",
+          "careers_url": "https://www.knownsec.com/careers"
+        },
+        {
+          "name": "山石网科",
+          "careers_url": "https://www.hillstonenet.com.cn/careers"
+        },
+        {
+          "name": "斗象科技",
+          "careers_url": "https://www.riskivy.com/careers"
+        }
+      ]
+    },
+    {
+      "id": "energy-carbon-neutrality",
+      "name": "新能源 / 储能 / 碳中和",
+      "companies": [
+        {
+          "name": "宁德时代 CATL",
+          "careers_url": "https://www.catl.com/careers/"
+        },
+        {
+          "name": "比亚迪",
+          "careers_url": "https://job.byd.com/"
+        },
+        {
+          "name": "隆基绿能",
+          "careers_url": "https://www.longi.com/cn/careers/"
+        },
+        {
+          "name": "阳光电源",
+          "careers_url": "https://www.sungrowpower.com/cn/careers"
+        },
+        {
+          "name": "远景科技集团",
+          "careers_url": "https://www.envision-group.com/careers"
+        },
+        {
+          "name": "天合光能",
+          "careers_url": "https://www.trinasolar.com/cn/careers"
+        },
+        {
+          "name": "晶科能源",
+          "careers_url": "https://www.jinkosolar.com/cn/careers"
+        },
+        {
+          "name": "晶澳科技",
+          "careers_url": "https://www.jasolar.com/cn/careers"
+        },
+        {
+          "name": "欣旺达",
+          "careers_url": "https://www.sunwoda.com/careers"
+        },
+        {
+          "name": "亿纬锂能",
+          "careers_url": "https://www.evebattery.com/careers"
+        }
+      ]
+    },
+    {
+      "id": "consulting-hr-services",
+      "name": "咨询 / 人力资源服务 / 专业服务",
+      "companies": [
+        {
+          "name": "埃森哲中国",
+          "careers_url": "https://www.accenture.com/cn-zh/careers"
+        },
+        {
+          "name": "德勤中国",
+          "careers_url": "https://www2.deloitte.com/cn/zh/careers.html"
+        },
+        {
+          "name": "普华永道中国",
+          "careers_url": "https://www.pwccn.com/zh/careers.html"
+        },
+        {
+          "name": "安永中国",
+          "careers_url": "https://www.ey.com/zh_cn/careers"
+        },
+        {
+          "name": "毕马威中国",
+          "careers_url": "https://kpmg.com/cn/zh/home/careers.html"
+        },
+        {
+          "name": "麦肯锡中国",
+          "careers_url": "https://www.mckinsey.com/cn/careers"
+        },
+        {
+          "name": "波士顿咨询 BCG",
+          "careers_url": "https://careers.bcg.com/locations/china"
+        },
+        {
+          "name": "贝恩咨询",
+          "careers_url": "https://www.bain.com/careers/"
+        },
+        {
+          "name": "科锐国际",
+          "careers_url": "https://www.careerintlinc.com/join"
+        },
+        {
+          "name": "猎聘同道",
+          "careers_url": "https://www.tongdao.com/careers"
+        }
+      ]
+    },
+    {
+      "id": "consumer-retail-food",
+      "name": "新消费 / 零售 / 餐饮品牌",
+      "companies": [
+        {
+          "name": "瑞幸咖啡",
+          "careers_url": "https://www.lkcoffee.com/join"
+        },
+        {
+          "name": "蜜雪冰城",
+          "careers_url": "https://www.mxbc.com/join"
+        },
+        {
+          "name": "喜茶",
+          "careers_url": "https://www.heytea.com/careers"
+        },
+        {
+          "name": "元气森林",
+          "careers_url": "https://www.yuanqisenlin.com/careers"
+        },
+        {
+          "name": "完美日记 / 逸仙电商",
+          "careers_url": "https://www.yatsenglobal.com/careers"
+        },
+        {
+          "name": "泡泡玛特",
+          "careers_url": "https://www.popmart.com/cn/careers"
+        },
+        {
+          "name": "名创优品",
+          "careers_url": "https://www.miniso.com/careers"
+        },
+        {
+          "name": "钟薛高",
+          "careers_url": "https://www.chicecream.com/join"
+        },
+        {
+          "name": "花西子",
+          "careers_url": "https://www.florasis.com/pages/careers"
+        },
+        {
+          "name": "三只松鼠",
+          "careers_url": "https://www.3songshu.com/join"
+        }
+      ]
+    }
+  ]
+}

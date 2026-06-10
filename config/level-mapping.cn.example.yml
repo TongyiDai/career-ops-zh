@@ -1,0 +1,133 @@
+# 中国互联网/科技公司职级映射参考
+#
+# 说明：
+# - 这是用于 research/growth 的“职级对标参考”，不是精确薪酬表；
+# - 不同 BU、城市、年份、序列差异很大，必须结合 JD、面试反馈、薪酬数据源复核；
+# - `market_equivalent` 只用于粗粒度对标，避免把不同公司的职级机械等同。
+
+version: 2026-06-10
+
+companies:
+  alibaba:
+    display_name: 阿里巴巴
+    ladders:
+      professional:
+        - level: P5
+          title_hint: 初级/中级专员
+          market_equivalent: junior-mid
+        - level: P6
+          title_hint: 高级专员/资深执行
+          market_equivalent: senior-ic
+        - level: P7
+          title_hint: 专家/小团队负责人
+          market_equivalent: staff-or-lead
+        - level: P8
+          title_hint: 高级专家/负责人
+          market_equivalent: principal-or-manager
+        - level: P9
+          title_hint: 资深专家/总监级
+          market_equivalent: director
+  bytedance:
+    display_name: 字节跳动
+    ladders:
+      professional:
+        - level: 1-2
+          title_hint: 初级/中级
+          market_equivalent: junior-mid
+        - level: 2-1
+          title_hint: 高级
+          market_equivalent: senior-ic
+        - level: 2-2
+          title_hint: 资深/小方向负责人
+          market_equivalent: staff-or-lead
+        - level: 3-1
+          title_hint: 专家/团队负责人
+          market_equivalent: principal-or-manager
+        - level: 3-2
+          title_hint: 高级专家/总监级
+          market_equivalent: director
+  tencent:
+    display_name: 腾讯
+    ladders:
+      professional:
+        - level: T7
+          title_hint: 高级工程师/高级产品
+          market_equivalent: senior-ic
+        - level: T8
+          title_hint: 资深/专家
+          market_equivalent: staff-or-lead
+        - level: T9
+          title_hint: 专家/负责人
+          market_equivalent: principal-or-manager
+        - level: T10
+          title_hint: 高级专家/总监级
+          market_equivalent: director
+  meituan:
+    display_name: 美团
+    ladders:
+      professional:
+        - level: L6
+          title_hint: 高级
+          market_equivalent: senior-ic
+        - level: L7
+          title_hint: 资深/专家
+          market_equivalent: staff-or-lead
+        - level: L8
+          title_hint: 专家/负责人
+          market_equivalent: principal-or-manager
+        - level: L9
+          title_hint: 高级专家/总监级
+          market_equivalent: director
+  jd:
+    display_name: 京东
+    ladders:
+      professional:
+        - level: P5
+          title_hint: 高级
+          market_equivalent: senior-ic
+        - level: P6
+          title_hint: 资深/专家
+          market_equivalent: staff-or-lead
+        - level: P7
+          title_hint: 专家/负责人
+          market_equivalent: principal-or-manager
+        - level: P8
+          title_hint: 总监级
+          market_equivalent: director
+  baidu:
+    display_name: 百度
+    ladders:
+      professional:
+        - level: T5
+          title_hint: 高级
+          market_equivalent: senior-ic
+        - level: T6
+          title_hint: 资深/专家
+          market_equivalent: staff-or-lead
+        - level: T7
+          title_hint: 专家/负责人
+          market_equivalent: principal-or-manager
+        - level: T8
+          title_hint: 总监级
+          market_equivalent: director
+
+dimensions:
+  - key: business_complexity
+    name: 业务复杂度
+    evidence: 负责业务规模、用户/客户规模、收入/成本影响、跨区域/跨 BU 复杂度
+  - key: decision_scope
+    name: 决策范围
+    evidence: 是否独立定义方向、是否影响路线图、是否拥有资源调配权
+  - key: org_influence
+    name: 组织影响力
+    evidence: 跨团队协作范围、向上管理、对外客户/生态影响
+  - key: professional_depth
+    name: 专业深度
+    evidence: 方法论、技术/产品判断、关键问题拆解能力
+  - key: result_scale
+    name: 结果规模
+    evidence: 可复核指标、上线范围、商业化结果、效率提升
+  - key: talent_scope
+    name: 人才/团队
+    evidence: 是否带人、培养他人、建立机制或标准
+

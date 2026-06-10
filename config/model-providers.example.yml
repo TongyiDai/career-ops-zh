@@ -1,0 +1,87 @@
+# 模型供应商配置模板
+# 默认情况下，你可以直接使用当前 AI Agent，无需配置本文件。
+# 当需要批量评估、自动扫描或脚本调用模型时，可复制为 config/model-providers.yml 并填写。
+
+default_provider: current-agent
+
+providers:
+  current-agent:
+    type: agent
+    description: "使用当前对话中的 AI Agent，不额外调用 API。"
+
+  openai:
+    type: openai-compatible
+    base_url: "https://api.openai.com/v1"
+    model: "gpt-5.5"
+    api_key_env: "OPENAI_API_KEY"
+
+  anthropic:
+    type: anthropic
+    model: "claude-sonnet"
+    api_key_env: "ANTHROPIC_API_KEY"
+
+  gemini:
+    type: google-gemini
+    model: "gemini-2.5-pro"
+    api_key_env: "GEMINI_API_KEY"
+
+  deepseek:
+    type: openai-compatible
+    base_url: "https://api.deepseek.com/v1"
+    model: "deepseek-chat"
+    api_key_env: "DEEPSEEK_API_KEY"
+
+  qwen:
+    type: openai-compatible
+    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model: "qwen-plus"
+    api_key_env: "DASHSCOPE_API_KEY"
+
+  doubao:
+    type: openai-compatible
+    base_url: "https://ark.cn-beijing.volces.com/api/v3"
+    model: "doubao-seed"
+    api_key_env: "ARK_API_KEY"
+
+  kimi:
+    type: openai-compatible
+    base_url: "https://api.moonshot.cn/v1"
+    model: "moonshot-v1-32k"
+    api_key_env: "MOONSHOT_API_KEY"
+
+  glm:
+    type: openai-compatible
+    base_url: "https://open.bigmodel.cn/api/paas/v4"
+    model: "glm-4-plus"
+    api_key_env: "ZHIPU_API_KEY"
+
+  minimax:
+    type: openai-compatible
+    base_url: "https://api.minimax.chat/v1"
+    model: "abab6.5s-chat"
+    api_key_env: "MINIMAX_API_KEY"
+
+  ollama:
+    type: openai-compatible
+    base_url: "http://localhost:11434/v1"
+    model: "qwen2.5:14b"
+    api_key_env: "OLLAMA_API_KEY"
+
+selection_policy:
+  chinese_writing:
+    preferred:
+      - qwen
+      - deepseek
+      - kimi
+      - doubao
+      - current-agent
+  complex_reasoning:
+    preferred:
+      - openai
+      - anthropic
+      - gemini
+      - deepseek
+  private_local:
+    preferred:
+      - ollama
+

@@ -1,0 +1,115 @@
+{
+  "comment": "国内招聘机会扫描配置。复制为 config/domestic-portals.json 后按需启用。默认只启用 sample-manual，避免首次运行触发真实网站访问。",
+  "title_filter": {
+    "positive": [
+      "AI",
+      "AIGC",
+      "大模型",
+      "智能体",
+      "Agent",
+      "产品经理",
+      "解决方案",
+      "售前",
+      "算法",
+      "机器学习",
+      "数据产品",
+      "数字化转型"
+    ],
+    "negative": [
+      "实习",
+      "校招",
+      "外包",
+      "驻场",
+      "电话销售",
+      "纯销售"
+    ]
+  },
+  "location_filter": {
+    "allow": ["北京", "上海", "深圳", "杭州", "广州", "成都", "远程"],
+    "block": ["海外", "新加坡", "印度"]
+  },
+  "sources": [
+    {
+      "name": "示例公司",
+      "enabled": true,
+      "provider": "manual-list",
+      "jobs": [
+        {
+          "title": "AI 产品经理（大模型应用方向）",
+          "url": "https://example.com/jobs/ai-product-manager",
+          "company": "示例公司",
+          "location": "北京"
+        },
+        {
+          "title": "Java 后端实习生",
+          "url": "https://example.com/jobs/java-intern",
+          "company": "示例公司",
+          "location": "上海"
+        }
+      ]
+    },
+    {
+      "name": "公司官网招聘页示例",
+      "enabled": false,
+      "provider": "static-html",
+      "careers_url": "https://example.com/careers",
+      "company": "公司官网招聘页示例",
+      "link_include": ["job", "position", "career", "招聘", "职位"],
+      "link_exclude": ["privacy", "login", "help"]
+    },
+    {
+      "name": "公开 JSON API 示例",
+      "enabled": false,
+      "provider": "public-json",
+      "company": "公开 JSON API 示例",
+      "api": {
+        "url": "https://example.com/api/jobs",
+        "method": "GET",
+        "headers": {
+          "accept": "application/json"
+        },
+        "jobs_path": "data.jobs",
+        "fields": {
+          "title": "title",
+          "url": "url",
+          "location": "city",
+          "company": "company"
+        }
+      }
+    },
+    {
+      "name": "Python 浏览器渲染示例",
+      "enabled": false,
+      "provider": "python-browser",
+      "careers_url": "https://hr.xiaomi.com/job/list",
+      "company": "Python 浏览器渲染示例",
+      "page_size": 10,
+      "python_browser": {
+        "wait_ms": 2500
+      },
+      "link_include": ["job", "职位", "岗位", "工程师", "产品经理"],
+      "link_exclude": ["privacy", "login", "help", "隐私", "登录"]
+    },
+    {
+      "name": "Boss 直聘",
+      "enabled": false,
+      "provider": "agent-handoff",
+      "reason": "Boss 直聘无稳定公开岗位 API，且有登录、风控和反爬限制。本项目不绕过登录、不模拟投递，只生成搜索建议或解析用户粘贴的 JD。",
+      "search_hint": "请在 Boss 直聘搜索：AI 产品经理 / 大模型产品 / 解决方案，城市按 profile.yml 筛选，然后把 JD 粘贴给 /career-zh parse-jd。"
+    },
+    {
+      "name": "猎聘",
+      "enabled": false,
+      "provider": "agent-handoff",
+      "reason": "猎聘岗位页常需要浏览器会话和动态渲染，适合用户导出/粘贴 JD 后解析，不建议未授权抓取。",
+      "search_hint": "请在猎聘搜索目标岗位，并粘贴职位详情或猎头 JD。"
+    },
+    {
+      "name": "拉勾 / 智联 / 前程无忧",
+      "enabled": false,
+      "provider": "agent-handoff",
+      "reason": "第三方招聘平台的接口稳定性、权限和反爬策略变化快。优先通过人工复制 JD、官方 RSS/开放接口或企业官网招聘页接入。",
+      "search_hint": "把搜索结果或 JD 文本复制给 /career-zh parse-jd。"
+    }
+  ]
+}
