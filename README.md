@@ -10,20 +10,6 @@
 职业定位 → 岗位发现 → JD 初筛 → 深度评估 → 简历定制 → 沟通话术 → 面试准备 → 管道跟进 → 复盘成长
 ```
 
-## 三张图看懂它怎么工作
-
-<p align="center">
-  <img src="assets/boards/job-screen.svg" alt="先判断岗位值不值得投，再投入时间" width="900" />
-</p>
-
-<p align="center">
-  <img src="assets/boards/evidence-story.svg" alt="把岗位要求和真实经历汇成一条职业叙事" width="900" />
-</p>
-
-<p align="center">
-  <img src="assets/boards/pipeline.svg" alt="求职管道持续管理岗位、表达、面试和下一步" width="900" />
-</p>
-
 > 公司用 AI 筛候选人。我们把 AI 交给候选人，让候选人更清醒地筛机会、讲清自己、管理职业选择。
 
 ## 这个项目能给求职者什么价值？
@@ -37,7 +23,11 @@
 - 是值得重点推进，还是只是关键词看起来很美？
 - 风险是偏技术、偏销售、偏产品、偏低阶，还是职责模糊？
 
-### 2. 不只是告诉你“投不投”，还告诉你“怎么投”
+<p align="center">
+  <img src="assets/boards/job-screen.svg" alt="先判断岗位值不值得投，再投入时间" width="900" />
+</p>
+
+### 2. 不只是告诉你“投不投”，还告诉你“怎么投"
 
 对一个岗位，它会继续追问：
 
@@ -47,9 +37,17 @@
 - 你该怎么解释转型、空窗、行业切换、职级变化？
 - 这个机会对下一阶段职业叙事有没有帮助？
 
+<p align="center">
+  <img src="assets/boards/evidence-story.svg" alt="把岗位要求和真实经历汇成一条职业叙事" width="900" />
+</p>
+
 ### 3. 把求职从“焦虑刷岗位”变成“经营机会管道”
 
 你可以把 JD、联系人、面试记录、Offer、失败复盘都沉淀下来。每一次面试不是孤立事件，而是下一次表达和判断的素材。
+
+<p align="center">
+  <img src="assets/boards/pipeline.svg" alt="求职管道持续管理岗位、表达、面试和下一步" width="900" />
+</p>
 
 ## 受哪些开源项目启发？
 
