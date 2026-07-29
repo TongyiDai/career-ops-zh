@@ -10,6 +10,20 @@
 职业定位 → 岗位发现 → JD 初筛 → 深度评估 → 简历定制 → 沟通话术 → 面试准备 → 管道跟进 → 复盘成长
 ```
 
+## 三张图看懂它怎么工作
+
+<p align="center">
+  <img src="assets/boards/job-screen.svg" alt="先判断岗位值不值得投，再投入时间" width="900" />
+</p>
+
+<p align="center">
+  <img src="assets/boards/evidence-story.svg" alt="把岗位要求和真实经历汇成一条职业叙事" width="900" />
+</p>
+
+<p align="center">
+  <img src="assets/boards/pipeline.svg" alt="求职管道持续管理岗位、表达、面试和下一步" width="900" />
+</p>
+
 > 公司用 AI 筛候选人。我们把 AI 交给候选人，让候选人更清醒地筛机会、讲清自己、管理职业选择。
 
 ## 这个项目能给求职者什么价值？
