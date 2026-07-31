@@ -29,7 +29,10 @@
 
 ```bash
 npm run doctor
+npm run verify
 ```
+
+`npm run doctor` 只检查本地运行条件；`npm run verify` 检查仓库契约和示例。涉及飞书同步时，先确认 `lark-cli auth status --json --verify` 的目标租户，再区分预览、写入和读回验证。没有认证或写入能力时继续本地流程，不能把未写入的导出报告为已同步。
 
 如果缺少用户文件，执行：
 
