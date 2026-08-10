@@ -1,3 +1,5 @@
+> “Plans are worthless, but planning is everything.” — Dwight D. Eisenhower
+
 # AI 求职助手
 
 面向中文求职市场的 AI 职业操作系统。
@@ -11,6 +13,23 @@
 ```
 
 > 公司用 AI 筛候选人。我们把 AI 交给候选人，让候选人更清醒地筛机会、讲清自己、管理职业选择。
+
+## Agent 使用契约（运行前必读）
+
+Skill 执行入口位于 [`.agents/skills/career-zh/SKILL.md`](.agents/skills/career-zh/SKILL.md)。Agent 先识别模式，再读取共享规则、对应模式文件和用户材料；每次输出都要把事实、判断、风险和下一步分开。
+
+| 项目 | 规则 |
+| --- | --- |
+| 触发 | 评估岗位、定制简历、写沟通话术、准备面试、管理投递、职业复盘、谈薪和公开岗位扫描 |
+| 首步 | 选择 `evaluate / resume / message / interview / tracker / coach / growth / scan / inbox / research / pipeline` 之一 |
+| 输入 | 用户 JD、`cv.md`、`config/profile.yml`、故事库、公开岗位页和用户明确授权的投递记录 |
+| 输出 | 匹配判断、风险、证据、待补信息和下一步动作；简历与话术只引用真实经历 |
+| 权限 | 强登录平台由用户粘贴内容或提供公开链接；不绕过登录、验证码或反爬 |
+| 写入 | 本地文件、tracker 或飞书同步前说明目标和副作用；投递、发消息和接受 offer 始终由用户完成 |
+| 降级 | 页面或数据不可访问时保留来源边界，输出可用草稿并列出影响判断的缺口 |
+| 验证 | 检查事实、链接、隐私字段和落盘状态；飞书写入后按记录或字段回读 |
+
+`/career-zh` 无参数时展示可用模式；用户直接粘贴 JD 时进入 `pipeline`。
 
 ## 这个项目能给求职者什么价值？
 

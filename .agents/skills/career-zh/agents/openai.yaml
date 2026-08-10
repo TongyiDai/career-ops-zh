@@ -1,0 +1,8 @@
+interface:
+  display_name: "AI 求职助手"
+  short_description: "按中文求职场景评估岗位、定制材料并管理求职管道"
+  brand_color: "#2F6BFF"
+  default_prompt: "使用 $career-zh 先读取我的简历和求职画像，再评估这个岗位的匹配度、风险和下一步动作；缺少材料时标出待补信息。"
+
+policy:
+  allow_implicit_invocation: true
