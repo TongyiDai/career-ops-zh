@@ -1,9 +1,6 @@
 ---
 name: career-zh
 description: AI 求职助手：面向中文求职市场的 AI 职业操作系统，支持岗位评估、中文简历定制、Boss/猎头/内推沟通、面试准备、求职管道、Tracker 飞书多维表格导出、职业策略、职业成长系统、故事库同步、国内招聘来源扫描和 bookmarklet JD inbox。适用于用户输入 /career-zh、要求评估岗位、生成简历、写求职话术、准备面试、管理投递、同步投递管道、讨论职业选择、复盘面试、对比 offer、谈薪、做职级/能力对标、从历史报告同步 STAR 故事，或扫描公司官网/公开招聘接口/处理本地 inbox JD 时。
-user_invocable: true
-user-invocable: true
-argument-hint: "[evaluate | resume | message | interview | tracker | coach | growth | story-sync | scan | inbox | research | pipeline]"
 ---
 
 # career-zh Router
