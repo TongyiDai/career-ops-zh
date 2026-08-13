@@ -1,12 +1,12 @@
 > “Plans are worthless, but planning is everything.” — Dwight D. Eisenhower
 
+# AI 求职助手
+
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-%3E%3D18-339933" alt="Node.js >=18">
   <img src="https://img.shields.io/badge/license-MIT-3fb950" alt="License MIT">
   <img src="https://img.shields.io/badge/CLI-career%20ops-2F6BFF" alt="Career ops CLI">
 </p>
-
-# AI 求职助手
 
 面向中文求职市场的 AI 职业操作系统。
 
