@@ -49,7 +49,7 @@ Skill 执行入口位于 [`.agents/skills/career-zh/SKILL.md`](.agents/skills/ca
 - 风险是偏技术、偏销售、偏产品、偏低阶，还是职责模糊？
 
 <p align="center">
-  <img src="assets/boards/job-screen.svg" alt="先判断岗位值不值得投，再投入时间" width="900" />
+  <img src="assets/boards/job-screen.svg?v=2" alt="先判断岗位值不值得投，再投入时间" width="900" />
 </p>
 
 ### 2. 不只是告诉你“投不投”，还告诉你“怎么投"
@@ -63,7 +63,7 @@ Skill 执行入口位于 [`.agents/skills/career-zh/SKILL.md`](.agents/skills/ca
 - 这个机会对下一阶段职业叙事有没有帮助？
 
 <p align="center">
-  <img src="assets/boards/evidence-story.svg" alt="把岗位要求和真实经历汇成一条职业叙事" width="900" />
+  <img src="assets/boards/evidence-story.svg?v=2" alt="把岗位要求和真实经历汇成一条职业叙事" width="900" />
 </p>
 
 ### 3. 把求职从“焦虑刷岗位”变成“经营机会管道”
