@@ -1,6 +1,6 @@
 > “Plans are worthless, but planning is everything.” — Dwight D. Eisenhower
 
-# AI 求职助手
+<h1 align="center">AI 求职助手</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-%3E%3D18-339933" alt="Node.js >=18">
