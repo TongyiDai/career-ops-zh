@@ -91,6 +91,10 @@ Skill 执行入口位于 [`.agents/skills/career-zh/SKILL.md`](.agents/skills/ca
 
 ## 求职者操作 SOP：从 0 到一次高质量投递
 
+### Agent 使用说明
+
+这是一个 Agent 应用项目，不要求把所有内容安装成独立 Skill。Agent 应先运行 `npm run doctor` 和 `npm run verify`，再按用户意图读取 `modes/_shared.md` 与对应模式文件。真实简历、画像、投递记录和输出报告留在本地；涉及飞书同步时，先运行 `lark-cli auth status --json --verify`，区分预览、写入和读回验证。没有认证时继续本地流程，不能报告为已同步。
+
 下面这套流程适合第一次使用，也适合每次认真推进一个新岗位。
 
 ### Step 0：安装和初始化
