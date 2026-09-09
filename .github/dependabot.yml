@@ -7,3 +7,8 @@ updates:
     open-pull-requests-limit: 3
     commit-message:
       prefix: "chore(deps)"
+    ignore:
+      # Playwright 1.62+ requires Node.js 20; this project still supports Node.js 18.
+      - dependency-name: playwright
+        versions:
+          - ">=1.62.0"
